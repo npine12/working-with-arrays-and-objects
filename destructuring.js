@@ -34,7 +34,7 @@ const {color, make, model,year}= carDetails;
 */
 
 function greeting( obj ) {
-  const {firstName, lastName, title}= greeting;
+  const {firstName, lastName, title}= obj;
   
   // Do not edit the code below.
   return 'Hello, ' + title + ' ' + firstName + ' ' + lastName + '!';
@@ -53,11 +53,9 @@ function greeting( obj ) {
   Sum up the values and return the total number.
 */
 
-function totalPopulation(){
-  utah= ,
-  california= ,
-  texas= ,
-  arizona= ,
+function totalPopulation(obj){
+  let {utah, california, texas, arizona}= obj
+  return utah + california + texas + arizona
 }
 
 
@@ -75,11 +73,12 @@ function totalPopulation(){
   Push these new variables to an array and return the array. 
 */
 
-function ingredients (){
-  carb:'',
-  fat:'',
-  protein:''
+function ingredients (obj){
+ let {carb, fat, protein} = obj
+return [carb, fat , protein]
 }
+
+
 
 
 
@@ -97,7 +96,14 @@ function ingredients (){
   Find the smallest number of the three and return that number.
 */
 
-//Code Here
+function largeNumbers ( {first, second, third}){
+  if(first < second && first < third){
+    return first
+  }if(second < first && second < third){
+    return second
+  }else{return third}
+}
+
 
 
 
@@ -109,6 +115,11 @@ function ingredients (){
   Find the longest array and return that array.
 */
 
-//Code Here
+function numberGroups ( {a, b, c}){
+  if(a.length > b.length && a.length > c.length){
+    return a
+  }if(b.length > a.length && b.length > c.length){
+    return b
+  }else{return c}
 
-
+}
